@@ -37,8 +37,9 @@ public class  CourseMenu extends JFrame{
      JTable table;
     DefaultTableModel model;
     JScrollPane scroll;
+    Font hf;
     String[] coloum = {"Name","Roll No","Class held","Class present","Percentage"};
-    
+    int option;
      
        
     CourseMenu(){
@@ -65,7 +66,7 @@ public class  CourseMenu extends JFrame{
         c.add(mb);
         
         
-         Font hf=new Font("Arial",Font.BOLD,16);
+          hf=new Font("Arial",Font.BOLD,16);
         table = new JTable();
         
         model = new DefaultTableModel();
@@ -98,8 +99,7 @@ public class  CourseMenu extends JFrame{
         frame.add(c);
         
         
-        
-        openitem.addActionListener(new ActionListener(){
+       openitem.addActionListener(new ActionListener(){
         
   
         @Override
@@ -116,7 +116,7 @@ public class  CourseMenu extends JFrame{
                 scroll.setBounds(10,60,1300,500);
                 c.add(scroll);
   
-                int option = jc.showOpenDialog(CourseMenu.this);
+                option = jc.showOpenDialog(CourseMenu.this);
                 if (option == JFileChooser.APPROVE_OPTION){
                     
                     File sf = jc.getSelectedFile();
@@ -143,20 +143,6 @@ public class  CourseMenu extends JFrame{
         }
         
         });
-        
-       home.addActionListener(new ActionListener(){
-        
-  
-        @Override
-        public void actionPerformed(ActionEvent e){
-            
-  
-                frame.dispose();
-                Home hm = new Home();           
-        }
-        
-        });
-           
         
         
     }

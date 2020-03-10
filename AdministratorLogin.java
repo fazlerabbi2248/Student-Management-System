@@ -16,12 +16,13 @@ import javax.swing.JTextField;
 public class AdministratorLogin extends JFrame{
     
     
-           private Container c;
-           private Font F ;
-           private JLabel username,password;
-           private JTextField usernameField;
-           private JPasswordField passField;
-           private JButton submit;
+            Container c;
+            Font F ;
+            JLabel username,password;
+            JTextField usernameField;
+            JPasswordField passField;
+            JButton submit;
+           JFrame frame;
     
     AdministratorLogin(){
         
@@ -61,7 +62,7 @@ public class AdministratorLogin extends JFrame{
         
         
         
-        JFrame frame = new JFrame();
+         frame = new JFrame();
         
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setBounds(200,50,800,650);
@@ -71,28 +72,7 @@ public class AdministratorLogin extends JFrame{
         frame.add(c);
         
         
-        submit.addActionListener(new ActionListener(){
         
-  
-        @Override
-        public void actionPerformed(ActionEvent e){
- 
-            String name=usernameField.getText();
-            String pass= passField.getText();
- 
-                if(name.equals("Admin") && pass.equals("1234")){
-                    JOptionPane.showMessageDialog(null,"Welcome");
-                    frame.dispose();
-                    AdminstratorDemo admin = new AdminstratorDemo();
-                }
-                else{
-                    JOptionPane.showMessageDialog(null,"Wrong Password");
-                    usernameField.setText("");
-                    passField.setText("");
-                }
-        }
-        
-        });
     }
     
 }

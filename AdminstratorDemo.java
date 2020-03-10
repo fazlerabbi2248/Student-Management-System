@@ -19,12 +19,13 @@ import javax.swing.border.Border;
 
 public class AdminstratorDemo extends JFrame{
     
-    private Container c;
-    private JLabel adminlabel,label1,label2,label3,label4,label5,label6,label7,label8;
-    private JButton homebtn,addfacultybtn,addstubtn,updatebtn,deletestubtn,updatefacbtn,deletetfacbtn,routinebtn,addroutine;
-    private final Font f;
-    private final Font hf;
-    private final Cursor cursor; 
+    Container c;
+    JLabel adminlabel,label1,label2,label3,label4,label5,label6,label7,label8;
+    JButton homebtn,addfacultybtn,addstubtn,updatebtn,deletestubtn,updatefacbtn,deletetfacbtn,routinebtn,addroutine;
+    final Font f;
+    final Font hf;
+    final Cursor cursor;
+    JFrame frame;
     
     AdminstratorDemo(){
         c=this.getContentPane();
@@ -156,7 +157,7 @@ public class AdminstratorDemo extends JFrame{
         routinebtn.setBorder(emptyBorder);
         addroutine.setBorder(emptyBorder);
         
-        JFrame frame=new JFrame();
+        frame=new JFrame();
         
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setBounds(200,50,800,650);
@@ -166,178 +167,7 @@ public class AdminstratorDemo extends JFrame{
         frame.add(c);   
         
         
-        homebtn.addActionListener(new ActionListener(){
-        
-  
-        @Override
-        public void actionPerformed(ActionEvent e){
-            
-  
-                frame.dispose();
-                Home admin =new Home();
-        }
-        
-        });
-        
-        addfacultybtn.addActionListener(new ActionListener(){
-        
-  
-        @Override
-        public void actionPerformed(ActionEvent e){
-            
-  
-                if(e.getSource()==addfacultybtn){
                  
-                    frame.dispose();
-                    AddfacultyMember addmember = new AddfacultyMember();
-                    
-                }
-        }
-        
-        });
-        
-        addstubtn.addActionListener(new ActionListener(){
-        
-  
-        @Override
-        public void actionPerformed(ActionEvent e){
-            
-  
-                if(e.getSource()==addstubtn){
-                 
-                    frame.dispose();
-                    AddStudentMember addmember = new AddStudentMember();
-                    
-                }
-        }
-        
-        });
-        
-        updatebtn.addActionListener(new ActionListener(){
-        
-  
-        @Override
-        public void actionPerformed(ActionEvent e){
-            
-  
-                if(e.getSource()==updatebtn){
-                 
-                    frame.dispose();
-                    try {
-                        UpdateStudentInformation up = new UpdateStudentInformation();
-                    } catch (FileNotFoundException ex) {
-                        Logger.getLogger(AdminstratorDemo.class.getName()).log(Level.SEVERE, null, ex);
-                    }
-                }
-        }
-        
-        });
-        
-       updatefacbtn.addActionListener(new ActionListener(){
-        
-  
-        @Override
-        public void actionPerformed(ActionEvent e){
-            
-  
-                if(e.getSource()==updatefacbtn){
-                 
-                    frame.dispose();
-                    try {
-                        UpdateFacultyInformation up = new UpdateFacultyInformation();
-                    } catch (FileNotFoundException ex) {
-                        Logger.getLogger(AdminstratorDemo.class.getName()).log(Level.SEVERE, null, ex);
-                    }
-                }
-        }
-        
-        });
-        
-        deletestubtn.addActionListener(new ActionListener(){
-        
-  
-        @Override
-        public void actionPerformed(ActionEvent e){
-            
-  
-                if(e.getSource()==deletestubtn){
-                 
-                    frame.dispose();
-                    try {
-                        DeleteStudent deletestu = new DeleteStudent();
-                    } catch (FileNotFoundException ex) {
-                        Logger.getLogger(AdminstratorDemo.class.getName()).log(Level.SEVERE, null, ex);
-                    }
-                   
-                    
-                    
-                }
-        }
-        
-        });
-        
-         deletetfacbtn.addActionListener(new ActionListener(){
-        
-  
-        @Override
-        public void actionPerformed(ActionEvent e){
-            
-  
-                if(e.getSource()== deletetfacbtn){
-                 
-                    frame.dispose();
-                    try {
-                        DeleteFaculty delete = new DeleteFaculty();
-                    } catch (FileNotFoundException ex) {
-                        Logger.getLogger(AdminstratorDemo.class.getName()).log(Level.SEVERE, null, ex);
-                    }
-                   
-                    
-                    
-                }
-        }
-        
-        });
-         routinebtn.addActionListener(new ActionListener(){
-        
-  
-        @Override
-        public void actionPerformed(ActionEvent e){
-            
-  
-                if(e.getSource()== routinebtn){
-                 
-                    frame.dispose();
-                    try {
-                        UpdateRoutine updateRoutine = new UpdateRoutine();
-                    } catch (FileNotFoundException ex) {
-                        Logger.getLogger(AdminstratorDemo.class.getName()).log(Level.SEVERE, null, ex);
-                    }
-                   
-                    
-                    
-                }
-        }
-        
-        });
-         addroutine.addActionListener(new ActionListener(){
-        
-  
-        @Override
-        public void actionPerformed(ActionEvent e){
-            
-  
-                if(e.getSource()== addroutine){
-                 
-                    frame.dispose();
-                    AddRoutine updateRoutine = new AddRoutine();
-                   
-                    
-                    
-                }
-        }
-        
-        });         
     }
     public static void main(String[] args) {
        AdminstratorDemo adminDemo = new AdminstratorDemo();

@@ -200,7 +200,7 @@ public class Home extends JFrame{
             
   
                 frame.dispose();
-                AdministratorLogin admin =new AdministratorLogin();
+                AdministratorLoginButtonAction admin =new AdministratorLoginButtonAction();
         }
         
         });
