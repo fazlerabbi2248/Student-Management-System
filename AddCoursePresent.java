@@ -147,47 +147,47 @@ public class AddCoursePresent extends JFrame {
             
   
                 if(e.getSource()==add){
-                String sroll =name.getText();
-                String semister = roll.getText();
-                String session = ct1.getText();
-                String cname = ct2.getText();
-                String ccode =assign.getText();
-                String cheld = attendence.getText();
-                String cpresent = present.getText();
+                String StudentRoll =name.getText();
+                String Semister = roll.getText();
+                String Session = ct1.getText();
+                String CourseName = ct2.getText();
+                String CourseCode =assign.getText();
+                String ClassHeld = attendence.getText();
+                String ClassPresent = present.getText();
                 
-                String file = sroll+semister;
+                String file = StudentRoll+Semister;
               
                 
-                 if(sroll.equals("")){
+                 if(StudentRoll.equals("")){
                     JOptionPane.showMessageDialog(null,"Please Insert roll");
                 }
-                 else if(semister.equals("")){
+                 else if(Semister.equals("")){
                     JOptionPane.showMessageDialog(null,"Please Insert Semister");
                 }
-                 else if(session.equals("")){
+                 else if(Session.equals("")){
                     JOptionPane.showMessageDialog(null,"Please Insert Session");
                 }
-                 else if(cname.equals("")){
+                 else if(CourseName.equals("")){
                     JOptionPane.showMessageDialog(null,"Please Insert Course name");
                 }
-                else if(ccode.equals("")){
+                else if(CourseCode.equals("")){
                     JOptionPane.showMessageDialog(null,"Please Insert Course Code");
                 }
-                else if(cheld.equals("")){
+                else if(ClassHeld.equals("")){
                     JOptionPane.showMessageDialog(null,"Please Insert Class held No");
                 }
-                 else if(cpresent.equals("")){
+                 else if(ClassPresent.equals("")){
                     JOptionPane.showMessageDialog(null,"Please Insert Class Present No");
                 }
                  else{
                      
-                     double cheld1 =Double.parseDouble(cheld);
-                     double cpresent1 =Double.parseDouble(cpresent);
+                     double cheld1 =Double.parseDouble(ClassHeld);
+                     double cpresent1 =Double.parseDouble(ClassPresent);
                      double parcent1 =(cpresent1/cheld1)*100;
                      String parcent = df2.format(parcent1);
                      
                      String parcent2 =new Double(parcent).toString();
-                     filewriter(file,cname,ccode,cheld,cpresent,parcent2);
+                     filewriter(file,CourseName,CourseCode,ClassHeld,ClassPresent,parcent2);
                      JOptionPane.showMessageDialog(null, "Added Successfully");
                      name.setText("");
                      roll.setText("");
@@ -203,17 +203,17 @@ public class AddCoursePresent extends JFrame {
 
                 }
         }
-        private void filewriter(String file, String cname, String ccode, String cheld,String cpresent,String parcent1) {
+        private void filewriter(String file, String CourseName, String CourseCode, String ClassHeld,String ClassPresent,String Parc) {
                 try{
                     FileWriter wr = new FileWriter(file,true);
                    // wr.write(sroll+" "+"#");
                     //wr.write(semister+" "+"#");
                     //wr.write(session+" "+"#");
-                    wr.write(cname+" "+"#");
-                    wr.write(ccode+" "+"#");
-                    wr.write(cheld+" "+"#");
-                    wr.write(cpresent+" "+"#");
-                    wr.write(parcent1+" "+"#");
+                    wr.write(CourseName+" "+"#");
+                    wr.write(CourseCode+" "+"#");
+                    wr.write(ClassHeld+" "+"#");
+                    wr.write(ClassPresent+" "+"#");
+                    wr.write(Parc+" "+"#");
                     
                     
                     

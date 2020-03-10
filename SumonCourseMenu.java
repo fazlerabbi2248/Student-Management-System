@@ -30,7 +30,7 @@ public class SumonCourseMenu extends CourseMenu{
                if(ae.getSource()==addPresent.back)
                {
                  addPresent.frame.dispose();
-                 SumonCourseMenu dmf = new SumonCourseMenu();
+                 DirectorMenuFile dmf = new DirectorMenuFile();
                   
                }
             }

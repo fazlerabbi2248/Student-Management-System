@@ -131,7 +131,7 @@ public class AdminstratorDemo extends JFrame{
         c.add(label8);
         
         addroutine=new JButton("Add Routine");
-        addroutine.setBounds(200,560,210,50);
+        addroutine.setBounds(200,560,220,50);
         addroutine.setFont(f);
         addroutine.setCursor(cursor);
         addroutine.setBackground(new java.awt.Color(0,230,230));

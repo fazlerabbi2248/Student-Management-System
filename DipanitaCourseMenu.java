@@ -30,7 +30,7 @@ public class DipanitaCourseMenu extends CourseMenu{
                if(ae.getSource()==addPresent.back)
                {
                  addPresent.frame.dispose();
-                 DipanitaCourseMenu dmf = new DipanitaCourseMenu();
+                 DirectorMenuFile dmf = new DirectorMenuFile();
                   
                }
             }

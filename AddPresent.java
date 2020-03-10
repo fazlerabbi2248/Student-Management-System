@@ -138,7 +138,7 @@ public class AddPresent extends JFrame{
                 else{
                      double intheld =Double.parseDouble(sheld);
                      double intpresent =Double.parseDouble(spresent);
-                     double percent = (intpresent/intheld)*100;
+                     double percent = (intpresent/intheld)/100;
                      String percent1 = df2.format(percent);
                      
                      String parcent2 =new Double(percent1).toString();

@@ -1,4 +1,7 @@
 
+package projectsms;
+
+
 import java.awt.Color;
 import java.awt.Container;
 import java.awt.Font;
@@ -11,7 +14,7 @@ import javax.swing.JTable;
 
 public class semester2 extends JFrame {
     
-    
+    JFrame frame;
      private Container c;
      private JLabel l1;
      private Font f;
@@ -80,15 +83,20 @@ public class semester2 extends JFrame {
         b2.setFont(f);
         b2.setBorderPainted(false);
         c.add(b2);
-         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-        setExtendedState(MAXIMIZED_BOTH);
-    }
-    public static void main(String[] args) {
-        
-        semester2 frame = new semester2();
-       // frame.setVisible(true);
-    //    frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-    //   frame.setExtendedState(MAXIMIZED_BOTH);
+         frame = new JFrame();
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setBounds(200,50,800,650);
+        frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
+        frame.setTitle("Semester2");
+        frame.setVisible(true);
+        frame.add(c);
     }
     
+    public static void main(String[] args) {
+        semester2 s = new semester2();
+    }
+   
 }
+
+
+

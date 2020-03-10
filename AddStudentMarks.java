@@ -20,15 +20,15 @@ public class AddStudentMarks extends  StudentMarks{
     
     AddStudentMarks(){
         
-        filenamelbl=new JLabel("File Name");      
-        filenamelbl.setFont(f);
-       filenamelbl.setBounds(140,460,350,50);
-       c.add(filenamelbl);
+       // filenamelbl=new JLabel("File Name");      
+       // filenamelbl.setFont(f);
+       // filenamelbl.setBounds(140,460,350,50);
+        //c.add(filenamelbl);
         
-        filenam=new JTextField();      
-        filenam.setFont(f);
-        filenam.setBounds(500,460,300,40);
-        c.add(filenam);
+        //filenam=new JTextField();      
+        //filenam.setFont(f);
+        //filenam.setBounds(500,460,300,40);
+       // c.add(filenam);
         
         add=new JButton("Add");
         add.setBounds(650,510,150,50);

@@ -1,4 +1,7 @@
 
+package projectsms;
+
+
 import java.awt.Color;
 import java.awt.Container;
 import java.awt.Font;
@@ -19,6 +22,7 @@ public class semester1 extends JFrame{
      private JTable table;
      private JScrollPane scroll;
      private JButton b1,b2;
+     JFrame frame;
      
      private String[] cols={"Course title","Course Code"};
      
@@ -82,25 +86,17 @@ public class semester1 extends JFrame{
         b2.setBorderPainted(false);
         c.add(b2);
         
-        
-        setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-        setExtendedState(MAXIMIZED_BOTH);
-        
-        
-        
-      
-        
-        
-        
-       
-        
-        
+        frame = new JFrame();
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setBounds(200,50,800,650);
+        frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
+        frame.setTitle("Semester1");
+        frame.setVisible(true);
+        frame.add(c);
     }
-    public static void main(String[] args) {
         
-        semester1 frame = new semester1();
-       // frame.setVisible(true);
-    //    frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-    //   frame.setExtendedState(MAXIMIZED_BOTH);
-    }
+    
+    
 }
+
+

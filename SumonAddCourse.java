@@ -32,14 +32,14 @@ public class SumonAddCourse extends AddCourses{
                if(e.getSource()==Add)
             {
                 
-                String name =tname.getText();
-                String code =tcode.getText();
-                String  description = desArea.getText();
+                String name =CourseName.getText();
+                String code =CourseCode.getText();
+                String  description = CourseDescription.getText();
                 filewriter(name,code,description);
                 JOptionPane.showMessageDialog(null,"added Successfully");
-                tname.setText("");
-                tcode.setText("");
-                desArea.setText("");
+                CourseName.setText("");
+                CourseCode.setText("");
+                CourseDescription.setText("");
                 
                 
                 

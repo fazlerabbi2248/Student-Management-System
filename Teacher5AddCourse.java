@@ -32,24 +32,24 @@ public class Teacher5AddCourse extends AddCourses{
                if(e.getSource()==Add)
             {
                 
-                String name =tname.getText();
-                String code =tcode.getText();
-                String  description = desArea.getText();
+                String name =CourseName.getText();
+                String code =CourseCode.getText();
+                String  description = CourseDescription.getText();
                 if(name.equals("")){
                     JOptionPane.showMessageDialog(null, "Pelase Enter  Coursename");
                 }
                 else if(code.equals("")){
                     JOptionPane.showMessageDialog(null, "Pelase Enter  Course Code");
                 }
-                else if(desArea.equals("")){
+                else if(description.equals("")){
                     JOptionPane.showMessageDialog(null, "Pelase Say something About Course");
                 }
                 else{
                     filewriter(name,code,description);
                     JOptionPane.showMessageDialog(null,"added Successfully");
-                    tname.setText("");
-                    tcode.setText("");
-                   desArea.setText("");
+                    CourseName.setText("");
+                    CourseCode.setText("");
+                    CourseDescription.setText("");
                     
                 }
                 

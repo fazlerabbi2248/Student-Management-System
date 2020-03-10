@@ -30,7 +30,7 @@ public class DirectorCourseMenu extends CourseMenu{
                if(ae.getSource()==addPresent.back)
                {
                  addPresent.frame.dispose();
-                 DirectorCourseMenu dmf = new DirectorCourseMenu();
+                 DirectorMenuFile dmf = new DirectorMenuFile();
                   
                }
             }

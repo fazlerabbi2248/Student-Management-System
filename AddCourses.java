@@ -17,12 +17,12 @@ import javax.swing.JTextField;
 public class AddCourses extends JFrame{
     
      Container c;
-     JLabel cName,cCode,cDescription;
-     JTextField tname,tcode,desArea;
+     JLabel CourseNamelabel,CourseCodelabel,CourseDescriptionlabel;
+     JTextField CourseName,CourseCode,CourseDescription;
      // JTextArea desArea;
       JButton back,Add,home;
       Font F;
-      JScrollPane desAreascroll;
+      JScrollPane DescriptionAreaScroll;
       JFrame frame;
     
     
@@ -39,37 +39,37 @@ public class AddCourses extends JFrame{
         
         F = new Font("Arial",Font.BOLD,30);
         
-        cName = new JLabel("Course Name          :");
-        cName.setBounds(220, 50, 300,60);
-        cName.setFont(F);
-        c.add(cName);
+        CourseNamelabel = new JLabel("Course Name          :");
+        CourseNamelabel.setBounds(220, 50, 300,60);
+        CourseNamelabel.setFont(F);
+        c.add(CourseNamelabel);
         
-        tname = new JTextField();
-        tname.setBounds(520, 50, 400,60);
-        tname.setFont(F);
-        c.add(tname);
+        CourseName = new JTextField();
+        CourseName.setBounds(520, 50, 400,60);
+        CourseName.setFont(F);
+        c.add(CourseName);
         
-        cCode = new JLabel("Course Code           :");
-        cCode.setBounds(220, 130, 300,60);
-        cCode.setFont(F);
-        c.add(cCode);
+        CourseCodelabel = new JLabel("Course Code           :");
+        CourseCodelabel.setBounds(220, 130, 300,60);
+        CourseCodelabel.setFont(F);
+        c.add(CourseCode);
         
        
-        tcode = new JTextField();
-        tcode.setBounds(520, 130, 400,60);
-        tcode.setFont(F);
-        c.add(tcode);
+        CourseCode = new JTextField();
+        CourseCode.setBounds(520, 130, 400,60);
+        CourseCode.setFont(F);
+        c.add(CourseCode);
         
         
-        cDescription = new JLabel("Course Description:");
-        cDescription.setBounds(220, 200, 320,60);
-        cDescription.setFont(F);
-        c.add(cDescription);
+        CourseDescriptionlabel = new JLabel("Course Description:");
+        CourseDescriptionlabel.setBounds(220, 200, 320,60);
+        CourseDescriptionlabel.setFont(F);
+        c.add(CourseDescriptionlabel);
         
-        desArea = new JTextField();
-        desArea.setBounds(520, 200, 400, 60);
-        desArea.setFont(F);
-        c.add(desArea);
+        CourseDescription = new JTextField();
+        CourseDescription.setBounds(520, 200, 400, 60);
+        CourseDescription.setFont(F);
+        c.add(CourseDescription);
          
         
        

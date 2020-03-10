@@ -186,7 +186,6 @@ public class ShowA extends JFrame{
                            double per1 =Double.parseDouble(per);
                            per1++;
                            if(i==lines.length-1){
-                               double per2 =per1/i+1;
                               String parcent = df2.format(per1); 
                               String parcent2 =new Double(parcent).toString();
                               label.setText(parcent2+"%");
