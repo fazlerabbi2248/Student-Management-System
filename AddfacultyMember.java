@@ -49,18 +49,23 @@ public class AddfacultyMember extends AddMemberFaculty{
                 else{
                     
                     filewriter(tname,thometown,temail,tcontact,tblood);
-                   JOptionPane.showMessageDialog(null,"Added Succesfully");
-                   name.setText("");
-                   hometown.setText("");
-                   email.setText("");
-                   contact.setText("");
-                   blood.setText("");
+                    SetEmpty();
                     
                 }
                 
             
   
         }
+        
+        private void SetEmpty(){
+                   JOptionPane.showMessageDialog(null,"Added Succesfully");
+                   name.setText("");
+                   hometown.setText("");
+                   email.setText("");
+                   contact.setText("");
+                   blood.setText("");
+             
+         }
             private void filewriter(String tname, String thometown,String temail, String tcontact, String tblood) {
                 
                 try{

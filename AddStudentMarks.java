@@ -112,6 +112,18 @@ public class AddStudentMarks extends  StudentMarks{
                                  double sum = (intct2+intassign)/2+intattend;
                                   String sum1=new Double(sum).toString(); 
                                   filewriter(sname,sroll,sct1,sct2,sassign,sattendence,sum1);
+                                  SetEmpty();   
+                             }
+                } 
+                
+                
+            }
+            
+            }
+        
+        private void SetEmpty(){
+            
+            
                                  JOptionPane.showMessageDialog(null, "Insert Successfully");
                                  name.setText("");
                                  roll.setText("");
@@ -119,20 +131,9 @@ public class AddStudentMarks extends  StudentMarks{
                                  ct2.setText("");
                                  assign.setText("");
                                  attendence.setText("");
-                              
-                                 
-                                 
-                             }
-                   
-                    
-                    
-                    
-                } 
-                
-                
-            }
-            
-            }
+                     
+             
+         }
         private void filewriter(String sname, String sroll, String sct1, String sct2, String sassign, String sattendence,String sum1) {
                 try{
                     FileWriter wr = new FileWriter(filename,true);

@@ -51,9 +51,6 @@ public class UpdateStudentInformation extends StudentInformation{
                 String blood_grp = model.getValueAt(numRow, 6).toString();
                // model.removeRow(numRow);
                 
-                  
-        
-                
                 frame.dispose();
                 UpdateStudent adm = new UpdateStudent();
                 adm.name.setText(name);
@@ -63,10 +60,13 @@ public class UpdateStudentInformation extends StudentInformation{
                 adm.eemail.setText(email_name);
                 adm.contact.setText(contact_no);
                 adm.blood.setText(blood_grp);
-                adm.row=numRow;
+                adm.row=numRow;  
+        
+                
                 
                 
             }
+           
         });
         back.addActionListener(new ActionListener(){
         

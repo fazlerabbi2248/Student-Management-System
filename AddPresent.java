@@ -110,20 +110,24 @@ public class AddPresent extends JFrame{
         frame.setVisible(true);
         frame.add(c);
         
+        
+        
+        
+        
+                
+        
+        
         add.addActionListener(new ActionListener(){
         @Override
         public void actionPerformed(ActionEvent e){
             
             if(e.getSource()==add)
             {
+                
                 String sname =name.getText();
                 String sroll = roll.getText();
                 String sheld = held.getText();
                 String spresent = present.getText();
-                
-                
-                
-                
                 
                 if(sname.equals("")){
                     JOptionPane.showMessageDialog(null,"Please Insert name");
@@ -136,22 +140,17 @@ public class AddPresent extends JFrame{
                 }
                 
                 else{
-                     double intheld =Double.parseDouble(sheld);
+                    
+                    double intheld =Double.parseDouble(sheld);
                      double intpresent =Double.parseDouble(spresent);
                      double percent = (intpresent/intheld)/100;
                      String percent1 = df2.format(percent);
                      
+                  
                      String parcent2 =new Double(percent1).toString();
                      filewriter(sname,sroll,sheld,spresent,parcent2);
                      JOptionPane.showMessageDialog(null, "Added Successfully");
-                     name.setText("");
-                     roll.setText("");
-                     held.setText("");
-                     present.setText("");
-                
-                   
-                    
-                    
+                     SetEmpty(); 
                     
                 } 
                 
@@ -180,6 +179,23 @@ public class AddPresent extends JFrame{
                     System.out.println(ae);
                 }
             }
+        /* private String CalculationPercent(){
+             
+                     double intheld =Double.parseDouble(sheld);
+                     double intpresent =Double.parseDouble(spresent);
+                     double percent = (intpresent/intheld)/100;
+                     String percent1 = df2.format(percent);
+                     return  percent1;
+        }   
+        */
+         
+         private void SetEmpty(){
+                     name.setText("");
+                     roll.setText("");
+                     held.setText("");
+                     present.setText("");
+             
+         }
         
         });
         

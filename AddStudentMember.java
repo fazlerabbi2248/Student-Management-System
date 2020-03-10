@@ -65,6 +65,17 @@ public class AddStudentMember extends AddMember{
                 else{
                     
                    filewriter(sname,sroll,ssession,shometown,semail,scontact,sblood);
+                   SetEmpty();
+                    
+                }
+                
+               
+                
+            }
+        }
+         private void SetEmpty(){
+            
+            
                    JOptionPane.showMessageDialog(null,"Added Succesfully");
                    name.setText("");
                    roll.setText("");
@@ -73,13 +84,9 @@ public class AddStudentMember extends AddMember{
                    eemail.setText("");
                    contact.setText("");
                    blood.setText("");
-                    
-                }
-                
-               
-                
-            }
-        }
+                     
+             
+         }
             private void filewriter(String sname, String sroll, String ssession, String shometown, String semail, String scontact, String sblood) {
                 try{
                     FileWriter wr = new FileWriter("student.txt",true);

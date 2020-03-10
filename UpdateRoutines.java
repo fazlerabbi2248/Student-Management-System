@@ -25,7 +25,7 @@ public class UpdateRoutines extends AddRoutine{
          add.setVisible(false);
         update=new JButton("update");
         update.setBounds(520,510,150,50);
-       update.setFont(f);
+        update.setFont(f);
         update.setBackground(Color.BLACK);
         update.setForeground(Color.WHITE);
         c.add(update);
