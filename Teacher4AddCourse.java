@@ -46,10 +46,7 @@ public class Teacher4AddCourse extends AddCourses{
                 }
                 else{
                     filewriter(name,code,description);
-                    JOptionPane.showMessageDialog(null,"added Successfully");
-                    CourseName.setText("");
-                    CourseCode.setText("");
-                   CourseDescription.setText("");
+                    SetEmpty();
                     
                 }
                 
@@ -60,6 +57,13 @@ public class Teacher4AddCourse extends AddCourses{
                 
             }
         }
+        private void SetEmpty(){
+                     JOptionPane.showMessageDialog(null,"added Successfully");
+                     CourseName.setText("");
+                     CourseCode.setText("");
+                     CourseDescription.setText("");
+             
+         }
             private void filewriter(String tname, String tcode, String desArea) {
                 try{
                     FileWriter wr = new FileWriter("teacherCourse.txt",true);

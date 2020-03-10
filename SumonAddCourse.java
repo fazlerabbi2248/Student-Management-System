@@ -37,15 +37,20 @@ public class SumonAddCourse extends AddCourses{
                 String  description = CourseDescription.getText();
                 filewriter(name,code,description);
                 JOptionPane.showMessageDialog(null,"added Successfully");
-                CourseName.setText("");
-                CourseCode.setText("");
-                CourseDescription.setText("");
+                SetEmpty();
                 
                 
                 
                 
             }
         }
+        private void SetEmpty(){
+                     JOptionPane.showMessageDialog(null,"added Successfully");
+                     CourseName.setText("");
+                     CourseCode.setText("");
+                     CourseDescription.setText("");
+             
+         }
             private void filewriter(String tname, String tcode, String desArea) {
                 try{
                     FileWriter wr = new FileWriter("SumonCourse.txt",true);
